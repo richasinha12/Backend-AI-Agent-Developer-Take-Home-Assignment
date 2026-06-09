@@ -22,6 +22,10 @@ https://YOUR-RAILWAY-APP.up.railway.app
 ## Architecture (flow diagram)
 
 ```mermaid
+
+
+<img width="1024" height="755" alt="image" src="https://github.com/user-attachments/assets/25bdd23b-2ee1-4d1f-bcca-4934809dab41" />
+
 flowchart LR
   U[Client / Frontend] -->|POST /chat/{user_id}| API[FastAPI Route]
   API --> SVC[ChatService]
