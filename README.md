@@ -107,17 +107,13 @@ Open:
 **Call 1: establishes plan context**
 
 ```bash
-curl -s -X POST "https://backend-ai-agent-developer-take-home-assignment-production.up.railway.app/chat/demo-user" \
-  -H "Content-Type: application/json" \
-  -d '{"message":"What is your enterprise pricing?"}'
+curl -X POST "https://backend-ai-agent-developer-take-home-assignment-production.up.railway.app/chat/demo-user" -H "Content-Type: application/json" -d "{\"message\":\"What is your enterprise pricing?\"}"
 ```
 
 **Call 2: follow-up uses stored memory (no re-sent context)**
 
 ```bash
-curl -s -X POST "https://backend-ai-agent-developer-take-home-assignment-production.up.railway.app/chat/demo-user" \
-  -H "Content-Type: application/json" \
-  -d '{"message":"Does that include SSO?"}'
+curl -X POST "https://backend-ai-agent-developer-take-home-assignment-production.up.railway.app/chat/demo-user" -H "Content-Type: application/json" -d "{\"message\":\"Does that include SSO?\"}"
 ```
 
 ## Deploy to Railway (recommended)
