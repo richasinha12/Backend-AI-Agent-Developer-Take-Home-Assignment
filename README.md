@@ -7,7 +7,7 @@ This repo implements the take-home: a hosted conversational API with **persisten
 After deploying to Railway, paste your URL here:
 
 ```
-https://YOUR-RAILWAY-APP.up.railway.app
+backend-ai-agent-developer-take-home-assignment-production.up.railway.app
 ```
 
 ## Endpoints
