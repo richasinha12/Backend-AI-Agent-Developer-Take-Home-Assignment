@@ -7,7 +7,7 @@ This repo implements the take-home: a hosted conversational API with **persisten
 After deploying to Railway, paste your URL here:
 
 ```
-backend-ai-agent-developer-take-home-assignment-production.up.railway.app
+https://backend-ai-agent-developer-take-home-assignment-production.up.railway.app
 ```
 
 ## Endpoints
@@ -97,8 +97,8 @@ uvicorn app.main:app --reload
 ```
 
 Open:
-- API docs: `http://localhost:8000/docs`
-- Demo UI: `http://localhost:8000/`
+- API docs: `https://backend-ai-agent-developer-take-home-assignment-production.up.railway.app/docs`
+- Demo UI: `https://backend-ai-agent-developer-take-home-assignment-production.up.railway.app`
 
 ## Two curl commands (cross-session memory demo)
 
@@ -107,17 +107,17 @@ Open:
 **Call 1: establishes plan context**
 
 ```bash
-curl -s -X POST "http://localhost:8000/chat/demo-user" \
+curl -s -X POST "https://backend-ai-agent-developer-take-home-assignment-production.up.railway.app/chat/demo-user" \
   -H "Content-Type: application/json" \
-  -d '{"message":"What is your enterprise pricing?"}' | jq
+  -d '{"message":"What is your enterprise pricing?"}'
 ```
 
 **Call 2: follow-up uses stored memory (no re-sent context)**
 
 ```bash
-curl -s -X POST "http://localhost:8000/chat/demo-user" \
+curl -s -X POST "https://backend-ai-agent-developer-take-home-assignment-production.up.railway.app/chat/demo-user" \
   -H "Content-Type: application/json" \
-  -d '{"message":"Does that include SSO?"}' | jq
+  -d '{"message":"Does that include SSO?"}'
 ```
 
 ## Deploy to Railway (recommended)
