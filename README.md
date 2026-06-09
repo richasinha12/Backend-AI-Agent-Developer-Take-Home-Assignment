@@ -21,6 +21,7 @@ https://YOUR-RAILWAY-APP.up.railway.app
 
 ## Architecture (flow diagram)
 
+
 ```mermaid
 
 flowchart LR
