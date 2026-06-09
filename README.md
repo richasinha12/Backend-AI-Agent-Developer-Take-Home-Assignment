@@ -38,7 +38,7 @@ flowchart LR
   AG -->|response + eval| API
   API --> U
 ```
-[System Architecture Diagram](saved-image-name.jpg)
+System Architecture Diagram -  https://github.com/richasinha12/Backend-AI-Agent-Developer-Take-Home-Assignment/commit/33a06c98da6841c14e98d9a3f60840c2f04539d1
 
 ## Memory design decision
 
@@ -100,6 +100,10 @@ Open:
 - API docs: `https://backend-ai-agent-developer-take-home-assignment-production.up.railway.app/docs`
 - Demo UI: `https://backend-ai-agent-developer-take-home-assignment-production.up.railway.app`
 
+3. Demo Video Walkthrough:
+https://www.loom.com/share/dbfce56a6ffb43b094a145cece329c3a
+
+
 ## Two curl commands (cross-session memory demo)
 
 > These two calls demonstrate persistence across separate requests using only `user_id`.
@@ -115,6 +119,16 @@ curl -X POST "https://backend-ai-agent-developer-take-home-assignment-production
 ```bash
 curl -X POST "https://backend-ai-agent-developer-take-home-assignment-production.up.railway.app/chat/demo-user" -H "Content-Type: application/json" -d "{\"message\":\"Does that include SSO?\"}"
 ```
+
+**Call 3:Show the History Endpoint**
+
+curl "https://backend-ai-agent-developer-take-home-assignment-production.up.railway.app/chat/demo-user/history"
+
+
+**Call 4: Show the Evaluation Endpoint**
+
+curl "https://backend-ai-agent-developer-take-home-assignment-production.up.railway.app/chat/demo-user/evals"
+
 
 ## Deploy to Railway (recommended)
 
