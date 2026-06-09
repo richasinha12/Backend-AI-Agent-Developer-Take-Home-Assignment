@@ -139,3 +139,4 @@ curl "https://backend-ai-agent-developer-take-home-assignment-production.up.rail
 3. Railway will detect the `Dockerfile` and run the service.
 4. Paste your live URL at the top of this README and re-test the curl commands against it.
 
+To ensure a reliable review process and eliminate public API key abuse, the live production environment utilizes a deterministic heuristic fallback mode. The core application logic, persistent database memory layer, tool-calling structure, and evaluation aggregation pipeline remain fully functional and testable without an live LLM connection."
