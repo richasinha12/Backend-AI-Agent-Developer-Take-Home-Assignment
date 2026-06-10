@@ -2,6 +2,23 @@
 
 This repo implements the take-home: a hosted conversational API with **persistent cross-session memory**, **real tool use**, and a **structured self-eval block on every response**.
 
+
+Instead of just building a simple wrapper, I focused heavily on building a deterministic, production-grade agentic workflow. Here is the AI stack and architecture I implemented:
+
+🤖 The AI Agent Layer: 
+Built using FastAPI and structured LLM reasoning. The agent operates in a strict schema layout, processing incoming user messages, dynamically checking context, and executing real-time internal tool lookups against corporate product catalogs.
+
+💾 Persistent Cross-Session Memory:
+A major challenge with stateless APIs is memory. I integrated a cloud PostgreSQL layer so the agent can pull prior conversational history across entirely separate communication sessions—ensuring it remembers context (like tracking follow-ups about Enterprise features or SSO) perfectly.
+
+📊 Automated Evaluation Telemetry:
+To prevent LLM hallucination and ensure response quality, I built an automated evaluation framework. Every single response is programmatically analyzed and graded for:
+🔹 Groundedness (Is it backed by actual data?)
+🔹 Relevance (Did it answer the user's specific intent?)
+🔹 Confidence Scores
+All telemetry metrics are instantly saved back to the database for live system monitoring.
+
+
 ## Live URL (Railway)
 
 After deploying to Railway, paste your URL here:
